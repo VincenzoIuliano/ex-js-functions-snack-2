@@ -1,8 +1,10 @@
 function creaTimer (time) {
-    return setTimeout(function () {
+    return function () { 
+    setTimeout(function () {
             console.log('Timer scaduto');
         }, time);
     }
+}
 
-
-creaTimer(2000); // Timer scaduto
+const timer = creaTimer(1000);
+timer(); // dopo 1 secondo stampa 'Timer scaduto'
